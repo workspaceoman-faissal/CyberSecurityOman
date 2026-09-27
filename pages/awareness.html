@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قسم التوعية | أسبوع الأمن السيبراني</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- MATRIX BACKGROUND -->
+<div id="matrix-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-icon">🛡️</div>
+    أسبوع <span style="color:var(--green);margin-right:4px"> الأمن السيبراني</span>
+  </div>
+  <button class="nav-hamburger" id="navToggle">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="../index.html">🏠 الرئيسية</a>
+    <a href="videos.html">🎬 الفيديوهات</a>
+    <a href="awareness.html">🖼️ التوعية</a>
+    <a href="quiz.html">🧠 الاختبار</a>
+    <a href="games.html">🎮 الألعاب</a>
+    <a href="exercises.html">📝 التمارين</a>
+    <a href="certificate.html">🏆 شهادتي</a>
+  </div>
+  <div class="nav-school">🏫 مدرسة جابر بن حيان (9-12)</div>
+</nav>
+
+<!-- AWARENESS SECTION -->
+<section id="awareness" class="hero" style="min-height:auto;padding:120px 20px 80px">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-tag tag-green">🖼️ قسم التوعية الأمنية 2026</div>
+      <h2 class="section-title">تعلّم بالصور</h2>
+      <p class="section-sub">مجموعة ملصقات توعوية رسمية من وزارة التعليم حول أهم مفاهيم الأمن السيبراني — تصفّح، صنّف، وحمّل ما يهمك</p>
+      <div style="margin-top:30px">
+        <a href="../index.html" class="btn-secondary">🏠 العودة للرئيسية</a>
+      </div>
+    </div>
+
+    <div class="aw-stats fade-in">
+      <div class="aw-stat"><b>13</b><span>ملصق توعوي</span></div>
+      <div class="aw-stat"><b>10</b><span>مواضيع متنوعة</span></div>
+      <div class="aw-stat"><b>2026</b><span>إصدار حديث</span></div>
+    </div>
+
+    <div class="aw-filter-bar fade-in">
+      <button class="aw-chip active" onclick="filterAware('all', this)">✨ الكل</button>
+      <button class="aw-chip" onclick="filterAware('phishing', this)">🎣 التصيد الاحتيالي</button>
+      <button class="aw-chip" onclick="filterAware('ai', this)">🤖 الذكاء الاصطناعي</button>
+      <button class="aw-chip" onclick="filterAware('privacy', this)">🗂️ خصوصية البيانات</button>
+      <button class="aw-chip" onclick="filterAware('password', this)">🔑 كلمات المرور</button>
+      <button class="aw-chip" onclick="filterAware('device', this)">📱 الأجهزة المحمولة</button>
+      <button class="aw-chip" onclick="filterAware('engineering', this)">🎭 الهندسة الاجتماعية</button>
+      <button class="aw-chip" onclick="filterAware('social', this)">📲 التواصل الاجتماعي</button>
+      <button class="aw-chip" onclick="filterAware('links', this)">🔗 الروابط المشبوهة</button>
+      <button class="aw-chip" onclick="filterAware('remote', this)">💻 العمل عن بُعد</button>
+      <button class="aw-chip" onclick="filterAware('cloud', this)">☁️ الحوسبة السحابية</button>
+      <button class="aw-chip" onclick="filterAware('report', this)">🚨 الإبلاغ عن الحوادث</button>
+    </div>
+
+    <div class="aw-grid">
+      <div class="aw-card fade-in" data-category="phishing" onclick="openAware(0)">
+        <img src="../assets/awareness/thumb/awareness_1.jpg" alt="لا تنخدع بالرسائل الاحتيالية" loading="lazy">
+        <div class="aw-card-num">01</div>
+        <a class="aw-card-dl" href="../assets/awareness/full/awareness_1.jpg" download="ملصق-توعوي-1.jpg" onclick="event.stopPropagation()" title="تحميل الملصق">⬇</a>
+        <div class="aw-card-overlay">
+          <div class="aw-card-tag aw-c-phishing">🎣 التصيد الاحتيالي</div>
+          <div class="aw-card-title">لا تنخدع بالرسائل الاحتيالية</div>
+          <div class="aw-card-hint">👁 اضغط للعرض بالحجم الكامل</div>
+        </div>
+      </div>
+
+      <div class="aw-card fade-in" data-category="ai" onclick="openAware(1)">
+        <img src="../assets/awareness/thumb/awareness_2.jpg" alt="الاستخدام الآمن لتطبيقات الذكاء الاصطناعي" loading="lazy">
+        <div class="aw-card-num">02</div>
+        <a class="aw-card-dl" href="../assets/awareness/full/awareness_2.jpg" download="ملصق-توعوي-2.jpg" onclick="event.stopPropagation()" title="تحميل الملصق">⬇</a>
+        <div class="aw-card-overlay">
+          <div class="aw-card-tag aw-c-ai">🤖 الذكاء الاصطناعي</div>
+          <div class="aw-card-title">الاستخدام الآمن لتطبيقات الذكاء الاصطناعي</div>
+          <div class="aw-card-hint">👁 اضغط للعرض بالحجم الكامل</div>
+        </div>
+      </div>
+
+      <div class="aw-card fade-in" data-category="ai" onclick="openAware(2)">
+        <img src="../assets/awareness/thumb/awareness_3.jpg" alt="الحماية من التزييف العميق وانتحال الهوية" loading="lazy">
+        <div class="aw-card-num">03</div>
+        <a class="aw-card-dl" href="../assets/awareness/full/awareness_3.jpg" download="ملصق-توعوي-3.jpg" onclick="event.stopPropagation()" title="تحميل الملصق">⬇</a>
+        <div class="aw-card-overlay">
+          <div class="aw-card-tag aw-c-ai">🤖 الذكاء الاصطناعي</div>
+          <div class="aw-card-title">الحماية من التزييف العميق وانتحال الهوية</div>
+          <div class="aw-card-hint">👁 اضغط للعرض بالحجم الكامل</div>
+        </div>
+      </div>
+
+      <div class="aw-card fade-in" data-category="privacy" onclick="openAware(3)">
+        <img src="../assets/awareness/thumb/awareness_4.jpg" alt="البيانات الشخصية أمانة ومسؤولية" loading="lazy">
+        <div class="aw-card-num">04</div>
+        <a class="aw-card-dl" href="../assets/awareness/full/awareness_4.jpg" download="ملصق-توعوي-4.jpg" onclick="event.stopPropagation()" title="تحميل الملصق">⬇</a>
+        <div class="aw-card-overlay">
+          <div class="aw-card-tag aw-c-privacy">🗂️ خصوصية البيانات</div>
+          <div class="aw-card-title">البيانات الشخصية أمانة ومسؤولية</div>
+          <div class="aw-card-hint">👁 اضغط للعرض بالحجم الكامل</div>
+        </div>
+      </div>
+
+      <div class="aw-card fade-in" data-category="password" onclick="openAware(4)">
+        <img src="../assets/awareness/thumb/awareness_5.jpg" alt="كلمة المرور القوية خط الدفاع الأول" loading="lazy">
+        <div class="aw-card-num">05</div>
+        <a class="aw-card-dl" href="../assets/awareness/full/awareness_5.jpg" download="ملصق-توعوي-5.jpg" onclick="event.stopPropagation()" title="تحميل الملصق">⬇</a>
+        <div class="aw-card-overlay">
+          <div class="aw-card-tag aw-c-password">🔑 كلمات المرور</div>
+          <div class="aw-card-title">كلمة المرور القوية خط الدفاع الأول</div>
+          <div class="aw-card-hint">👁 اضغط للعرض بالحجم الكامل</div>
+        </div>
+      </div>
+
+      <div class="aw-card fade-in" data-category="password" onclick="openAware(5)">
+        <img src="../assets/awareness/thumb/awareness_6.jpg" alt="عزز أمان حساباتك الرقمية" loading="lazy">
+        <div class="aw-card-num">06</div>
+        <a class="aw-card-dl" href="../assets/awareness/full/awareness_6.jpg" download="ملصق-توعوي-6.jpg" onclick="event.stopPropagation()" title="تحميل الملصق">⬇</a>
+        <div class="aw-card-overlay">
+          <div class="aw-card-tag aw-c-password">🔑 كلمات المرور</div>
+          <div class="aw-card-title">عزز أمان حساباتك الرقمية</div>
+          <div class="aw-card-hint">👁 اضغط للعرض بالحجم الكامل</div>
+        </div>
+      </div>
+
+      <div class="aw-card fade-in" data-category="device" onclick="openAware(6)">
+        <img src="../assets/awareness/thumb/awareness_7.jpg" alt="احمِ جهازك لتحمي بياناتك" loading="lazy">
+        <div class="aw-card-num">07</div>
+        <a class="aw-card-dl" href="../assets/awareness/full/awareness_7.jpg" download="ملصق-توعوي-7.jpg" onclick="event.stopPropagation()" title="تحميل الملصق">⬇</a>
+        <div class="aw-card-overlay">
+          <div class="aw-card-tag aw-c-device">📱 الأجهزة المحمولة</div>
+          <div class="aw-card-title">احمِ جهازك لتحمي بياناتك</div>
+          <div class="aw-card-hint">👁 اضغط للعرض بالحجم الكامل</div>
+        </div>
+      </div>
+
+      <div class="aw-card fade-in" data-category="engineering" onclick="openAware(7)">
+        <img src="../assets/awareness/thumb/awareness_8.jpg" alt="الهندسة الاجتماعية واستغلال الثقة" loading="lazy">
+        <div class="aw-card-num">08</div>
+        <a class="aw-card-dl" href="../assets/awareness/full/awareness_8.jpg" download="ملصق-توعوي-8.jpg" onclick="event.stopPropagation()" title="تحميل الملصق">⬇</a>
+        <div class="aw-card-overlay">
+          <div class="aw-card-tag aw-c-engineering">🎭 الهندسة الاجتماعية</div>
+          <div class="aw-card-title">الهندسة الاجتماعية واستغلال الثقة</div>
+          <div class="aw-card-hint">👁 اضغط للعرض بالحجم الكامل</div>
+        </div>
+      </div>
+
+      <div class="aw-card fade-in" data-category="social" onclick="openAware(8)">
+        <img src="../assets/awareness/thumb/awareness_9.jpg" alt="خصوصيتك اليوم أمانك غداً" loading="lazy">
+        <div class="aw-card-num">09</div>
+        <a class="aw-card-dl" href="../assets/awareness/full/awareness_9.jpg" download="ملصق-توعوي-9.jpg" onclick="event.stopPropagation()" title="تحميل الملصق">⬇</a>
+        <div class="aw-card-overlay">
+          <div class="aw-card-tag aw-c-social">📲 التواصل الاجتماعي</div>
+          <div class="aw-card-title">خصوصيتك اليوم أمانك غداً</div>
+          <div class="aw-card-hint">👁 اضغط للعرض بالحجم الكامل</div>
+        </div>
+      </div>
+
+      <div class="aw-card fade-in" data-category="links" onclick="openAware(9)">
+        <img src="../assets/awareness/thumb/awareness_10.jpg" alt="تحقق أولًا ثم تفاعل مع الروابط" loading="lazy">
+        <div class="aw-card-num">10</div>
+        <a class="aw-card-dl" href="../assets/awareness/full/awareness_10.jpg" download="ملصق-توعوي-10.jpg" onclick="event.stopPropagation()" title="تحميل الملصق">⬇</a>
+        <div class="aw-card-overlay">
+          <div class="aw-card-tag aw-c-links">🔗 الروابط المشبوهة</div>
+          <div class="aw-card-title">تحقق أولًا ثم تفاعل مع الروابط</div>
+          <div class="aw-card-hint">👁 اضغط للعرض بالحجم الكامل</div>
+        </div>
+      </div>
+
+      <div class="aw-card fade-in" data-category="remote" onclick="openAware(10)">
+        <img src="../assets/awareness/thumb/awareness_11.jpg" alt="مسؤوليتك اليوم تحمي بيانات الغد" loading="lazy">
+        <div class="aw-card-num">11</div>
+        <a class="aw-card-dl" href="../assets/awareness/full/awareness_11.jpg" download="ملصق-توعوي-11.jpg" onclick="event.stopPropagation()" title="تحميل الملصق">⬇</a>
+        <div class="aw-card-overlay">
+          <div class="aw-card-tag aw-c-remote">💻 العمل عن بُعد</div>
+          <div class="aw-card-title">مسؤوليتك اليوم تحمي بيانات الغد</div>
+          <div class="aw-card-hint">👁 اضغط للعرض بالحجم الكامل</div>
+        </div>
+      </div>
+
+      <div class="aw-card fade-in" data-category="cloud" onclick="openAware(11)">
+        <img src="../assets/awareness/thumb/awareness_12.jpg" alt="حماية بياناتك في السحابة مسؤولية الجميع" loading="lazy">
+        <div class="aw-card-num">12</div>
+        <a class="aw-card-dl" href="../assets/awareness/full/awareness_12.jpg" download="ملصق-توعوي-12.jpg" onclick="event.stopPropagation()" title="تحميل الملصق">⬇</a>
+        <div class="aw-card-overlay">
+          <div class="aw-card-tag aw-c-cloud">☁️ الحوسبة السحابية</div>
+          <div class="aw-card-title">حماية بياناتك في السحابة مسؤولية الجميع</div>
+          <div class="aw-card-hint">👁 اضغط للعرض بالحجم الكامل</div>
+        </div>
+      </div>
+
+      <div class="aw-card fade-in" data-category="report" onclick="openAware(12)">
+        <img src="../assets/awareness/thumb/awareness_13.jpg" alt="سرعة الإبلاغ تُقلل الأضرار" loading="lazy">
+        <div class="aw-card-num">13</div>
+        <a class="aw-card-dl" href="../assets/awareness/full/awareness_13.jpg" download="ملصق-توعوي-13.jpg" onclick="event.stopPropagation()" title="تحميل الملصق">⬇</a>
+        <div class="aw-card-overlay">
+          <div class="aw-card-tag aw-c-report">🚨 الإبلاغ عن الحوادث</div>
+          <div class="aw-card-title">سرعة الإبلاغ تُقلل الأضرار</div>
+          <div class="aw-card-hint">👁 اضغط للعرض بالحجم الكامل</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARENESS LIGHTBOX MODAL -->
+<div class="aw-modal-overlay" id="awareModal" onclick="handleAwareModalClick(event)">
+  <div class="aw-modal-box">
+    <div class="aw-modal-top">
+      <div class="aw-modal-titlewrap">
+        <div class="aw-modal-tag" id="awareTag">التصنيف</div>
+        <div class="aw-modal-title" id="awareTitle">عنوان الملصق</div>
+      </div>
+      <button class="aw-modal-close" onclick="closeAware()">✕</button>
+    </div>
+    <div class="aw-modal-imgwrap">
+      <button class="aw-nav-btn aw-nav-prev" onclick="awarePrev()" title="السابق">›</button>
+      <img id="awareImg" src="" alt="">
+      <button class="aw-nav-btn aw-nav-next" onclick="awareNext()" title="التالي">‹</button>
+    </div>
+    <div class="aw-modal-bottom">
+      <span class="aw-modal-counter" id="awareCounter">1 / 13</span>
+      <a class="aw-modal-dl" id="awareDownload" href="" download>⬇ تحميل الملصق</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">🛡️ أسبوع <span>الأمن السيبراني</span></div>
+  <div class="footer-school">🏫 مدرسة جابر بن حيان (9-12) — سلطنة عُمان</div>
+  <div class="footer-teacher">الأستاذ فيصل العريبي | معلم تقنية المعلومات</div>
+  <div class="footer-copy">© 2026 — جميع الحقوق محفوظة | تم التصميم لطلابنا الأعزاء</div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

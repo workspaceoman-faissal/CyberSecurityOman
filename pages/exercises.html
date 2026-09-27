@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التمارين | أسبوع الأمن السيبراني</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- MATRIX BACKGROUND -->
+<div id="matrix-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-icon">🛡️</div>
+    أسبوع <span style="color:var(--green);margin-right:4px"> الأمن السيبراني</span>
+  </div>
+  <button class="nav-hamburger" id="navToggle">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="../index.html">🏠 الرئيسية</a>
+    <a href="videos.html">🎬 الفيديوهات</a>
+    <a href="awareness.html">🖼️ التوعية</a>
+    <a href="quiz.html">🧠 الاختبار</a>
+    <a href="games.html">🎮 الألعاب</a>
+    <a href="exercises.html">📝 التمارين</a>
+    <a href="certificate.html">🏆 شهادتي</a>
+  </div>
+  <div class="nav-school">🏫 مدرسة جابر بن حيان (9-12)</div>
+</nav>
+
+<!-- EXERCISES SECTION -->
+<section id="exercises" style="background:var(--bg2);min-height:100vh;padding:120px 20px 80px">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-tag tag-purple">📝 التمارين التفاعلية</div>
+      <h2 class="section-title">طبّق ما تعلّمته</h2>
+      <p class="section-sub">تمارين عملية تثبّت معلوماتك وتنمّي مهاراتك</p>
+      <div style="margin-top:30px">
+        <a href="../index.html" class="btn-secondary">🏠 العودة للرئيسية</a>
+      </div>
+    </div>
+    <div class="exercises-list fade-in">
+
+      <!-- Exercise 1: Drag & Drop -->
+      <div class="exercise-card" id="ex1">
+        <div class="exercise-header" onclick="toggleEx('ex1')">
+          <div class="exercise-num" style="background:rgba(0,212,255,0.15);color:var(--cyan)">1</div>
+          <div class="exercise-info">
+            <div class="exercise-title">رتّب خطوات إنشاء كلمة مرور قوية</div>
+            <div class="exercise-type">🖱️ السحب والإفلات</div>
+          </div>
+          <div class="exercise-arrow">›</div>
+        </div>
+        <div class="exercise-body">
+          <p class="drag-instruction">اسحب كل خطوة وأفلتها في المكان الصحيح:</p>
+          <div class="drag-items" id="dragItems1">
+            <div class="drag-item" draggable="true" data-id="a">أضف رموزاً خاصة (@#!)</div>
+            <div class="drag-item" draggable="true" data-id="b">استخدم 12 حرفاً على الأقل</div>
+            <div class="drag-item" draggable="true" data-id="c">امزج أحرف كبيرة وصغيرة</div>
+            <div class="drag-item" draggable="true" data-id="d">لا تستخدم اسمك أو تاريخ ميلادك</div>
+          </div>
+          <div class="drop-zones">
+            <div class="drop-zone" data-correct="b" ondragover="ev.preventDefault()" ondrop="dropItem(ev,'zone1a')">
+              <div class="drop-label">الخطوة الأولى:</div>
+              <div class="drop-slot" id="zone1a"><span style="color:var(--text2)">أفلت هنا</span></div>
+            </div>
+            <div class="drop-zone" data-correct="c" ondragover="ev.preventDefault()" ondrop="dropItem(ev,'zone1b')">
+              <div class="drop-label">الخطوة الثانية:</div>
+              <div class="drop-slot" id="zone1b"><span style="color:var(--text2)">أفلت هنا</span></div>
+            </div>
+            <div class="drop-zone" data-correct="a" ondragover="ev.preventDefault()" ondrop="dropItem(ev,'zone1c')">
+              <div class="drop-label">الخطوة الثالثة:</div>
+              <div class="drop-slot" id="zone1c"><span style="color:var(--text2)">أفلت هنا</span></div>
+            </div>
+            <div class="drop-zone" data-correct="d" ondragover="ev.preventDefault()" ondrop="dropItem(ev,'zone1d')">
+              <div class="drop-label">الخطوة الرابعة:</div>
+              <div class="drop-slot" id="zone1d"><span style="color:var(--text2)">أفلت هنا</span></div>
+            </div>
+          </div>
+          <button class="check-btn" onclick="checkDrag()">✔ تحقق من الإجابات</button>
+          <div class="exercise-result" id="exResult1"></div>
+        </div>
+      </div>
+
+      <!-- Exercise 2: Fill blanks -->
+      <div class="exercise-card" id="ex2">
+        <div class="exercise-header" onclick="toggleEx('ex2')">
+          <div class="exercise-num" style="background:rgba(0,255,136,0.15);color:var(--green)">2</div>
+          <div class="exercise-info">
+            <div class="exercise-title">أكمل الفراغات — مصطلحات الأمن السيبراني</div>
+            <div class="exercise-type">⌨️ تعبئة الفراغات</div>
+          </div>
+          <div class="exercise-arrow">›</div>
+        </div>
+        <div class="exercise-body">
+          <div style="margin-top:14px">
+            <div class="fill-blank-row">
+              <span>1. يُسمى البرنامج الذي يتجسس على جهازك دون علمك بـ</span>
+              <input class="blank-input" id="blank1" data-answer="spyware" placeholder="...">
+            </div>
+            <div class="fill-blank-row">
+              <span>2. اختصار HTTPS يعني أن الموقع يستخدم بروتوكول</span>
+              <input class="blank-input" id="blank2" data-answer="تشفير" placeholder="...">
+            </div>
+            <div class="fill-blank-row">
+              <span>3. المصادقة الثنائية تعني استخدام</span>
+              <input class="blank-input" id="blank3" data-answer="خطوتين" placeholder="...">
+              <span>للتحقق من هويتك</span>
+            </div>
+            <div class="fill-blank-row">
+              <span>4. هجوم</span>
+              <input class="blank-input" id="blank4" data-answer="phishing" placeholder="...">
+              <span>يهدف إلى سرقة بياناتك عبر رسائل مزيفة</span>
+            </div>
+          </div>
+          <button class="check-btn" onclick="checkFillBlanks()">✔ تحقق من الإجابات</button>
+          <div class="exercise-result" id="exResult2"></div>
+        </div>
+      </div>
+
+      <!-- Exercise 3: Scenario -->
+      <div class="exercise-card" id="ex3">
+        <div class="exercise-header" onclick="toggleEx('ex3')">
+          <div class="exercise-num" style="background:rgba(255,107,53,0.15);color:var(--orange)">3</div>
+          <div class="exercise-info">
+            <div class="exercise-title">سيناريو: كيف تتصرف؟</div>
+            <div class="exercise-type">💭 اختيار الموقف الصحيح</div>
+          </div>
+          <div class="exercise-arrow">›</div>
+        </div>
+        <div class="exercise-body">
+          <div id="scenarioContent"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">🛡️ أسبوع <span>الأمن السيبراني</span></div>
+  <div class="footer-school">🏫 مدرسة جابر بن حيان (9-12) — سلطنة عُمان</div>
+  <div class="footer-teacher">الأستاذ فيصل العريبي | معلم تقنية المعلومات</div>
+  <div class="footer-copy">© 2026 — جميع الحقوق محفوظة | تم التصميم لطلابنا الأعزاء</div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
+
