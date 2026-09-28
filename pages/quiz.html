@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الاختبار | أسبوع الأمن السيبراني</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- MATRIX BACKGROUND -->
+<div id="matrix-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-icon">🛡️</div>
+    أسبوع <span style="color:var(--green);margin-right:4px"> الأمن السيبراني</span>
+  </div>
+  <button class="nav-hamburger" id="navToggle">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="../index.html">🏠 الرئيسية</a>
+    <a href="videos.html">🎬 الفيديوهات</a>
+    <a href="awareness.html">🖼️ التوعية</a>
+    <a href="quiz.html">🧠 الاختبار</a>
+    <a href="games.html">🎮 الألعاب</a>
+    <a href="exercises.html">📝 التمارين</a>
+    <a href="certificate.html">🏆 شهادتي</a>
+  </div>
+  <div class="nav-school">🏫 مدرسة جابر بن حيان (9-12)</div>
+</nav>
+
+<!-- QUIZ SECTION -->
+<section id="quiz" style="background:linear-gradient(180deg,var(--bg2),var(--bg));min-height:100vh;padding:120px 20px 80px">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-tag tag-orange">🧠 اختبر نفسك</div>
+      <h2 class="section-title">كويز الأمن السيبراني</h2>
+      <p class="section-sub">10 أسئلة تفاعلية تقيس مستواك في الأمن الرقمي</p>
+      <div style="margin-top:30px">
+        <a href="../index.html" class="btn-secondary">🏠 العودة للرئيسية</a>
+      </div>
+    </div>
+    <div class="quiz-wrapper fade-in">
+      <div id="quizArea">
+        <div class="quiz-q-counter" id="qCounter">السؤال 1 من 10</div>
+        <div class="quiz-progress-bar-wrap">
+          <div class="quiz-progress-fill" id="quizBar" style="width:10%"></div>
+        </div>
+        <div class="quiz-question">
+          <div class="quiz-q-emoji" id="qEmoji">🤔</div>
+          <div class="quiz-q-text" id="qText">جاري التحميل...</div>
+          <div class="quiz-options" id="qOptions"></div>
+          <div class="quiz-feedback" id="qFeedback"></div>
+          <div class="quiz-nav">
+            <button class="btn-next" id="nextBtn" onclick="nextQuestion()" style="display:none">السؤال التالي ←</button>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-score-box" id="quizScore">
+        <div class="score-circle">
+          <div class="score-num" id="scoreNum">0</div>
+          <div class="score-total" id="scoreTot">من 10</div>
+        </div>
+        <div class="score-msg" id="scoreMsg">أحسنت!</div>
+        <div class="score-sub" id="scoreSub">نتيجة جيدة، واصل التعلم</div>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <button class="btn-next" onclick="restartQuiz()" style="flex:none;padding:12px 24px">🔄 إعادة الاختبار</button>
+          <a href="certificate.html" class="btn-secondary" style="flex:none;padding:12px 24px">🏆 احصل على شهادتك</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">🛡️ أسبوع <span>الأمن السيبراني</span></div>
+  <div class="footer-school">🏫 مدرسة جابر بن حيان (9-12) — سلطنة عُمان</div>
+  <div class="footer-teacher">الأستاذ فيصل العريبي | معلم تقنية المعلومات</div>
+  <div class="footer-copy">© 2026 — جميع الحقوق محفوظة | تم التصميم  لطلابنا الأعزاء</div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
+

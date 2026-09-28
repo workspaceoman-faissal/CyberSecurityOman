@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الفيديوهات التعليمية | أسبوع الأمن السيبراني</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- MATRIX BACKGROUND -->
+<div id="matrix-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-icon">🛡️</div>
+    أسبوع <span style="color:var(--green);margin-right:4px"> الأمن السيبراني</span>
+  </div>
+  <button class="nav-hamburger" id="navToggle">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="../index.html">🏠 الرئيسية</a>
+    <a href="videos.html">🎬 الفيديوهات</a>
+    <a href="awareness.html">🖼️ التوعية</a>
+    <a href="quiz.html">🧠 الاختبار</a>
+    <a href="games.html">🎮 الألعاب</a>
+    <a href="exercises.html">📝 التمارين</a>
+    <a href="certificate.html">🏆 شهادتي</a>
+  </div>
+  <div class="nav-school">🏫 مدرسة جابر بن حيان (9-12)</div>
+</nav>
+
+<!-- VIDEOS SECTION -->
+<section id="videos" class="hero" style="min-height:auto;padding:120px 20px 80px">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-tag tag-cyan">🎬 الفيديوهات التعليمية</div>
+      <h2 class="section-title">تعلّم بالمشاهدة</h2>
+      <p class="section-sub">فيديوهات مشوّقة تشرح مفاهيم الأمن السيبراني بأسلوب بسيط وممتع</p>
+      <div style="margin-top:30px">
+        <a href="../index.html" class="btn-secondary">🏠 العودة للرئيسية</a>
+      </div>
+    </div>
+
+    <div class="videos-grid fade-in">
+
+      <div class="video-card" onclick="openVideo('ما هو الأمن السيبراني؟','🔐','مدخل لمفهوم الأمن الرقمي وأهميته في حياتنا اليومية','https://www.youtube.com/watch?v=FMJi74rXXJE')">
+        <div class="video-thumb">
+          <div class="video-thumb-inner">
+            <span>🔐</span>
+            <div class="play-btn">▶</div>
+          </div>
+          <div class="video-duration">⏱ 4:30</div>
+          <div class="video-grade grade5">الصف الخامس</div>
+        </div>
+        <div class="video-info">
+          <div class="video-title">ما هو الأمن السيبراني؟</div>
+          <div class="video-meta"><span>🔐 مقدمة</span><span>•</span><span>⭐ مناسب للجميع</span></div>
+          <div class="video-progress"><div class="video-progress-bar" style="width:0%"></div></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo('كلمات المرور القوية','🔑','كيف تنشئ كلمة مرور آمنة ولا تُنسى؟','https://www.youtube.com/watch?v=WaGBWkSunlc')">
+        <div class="video-thumb">
+          <div class="video-thumb-inner">
+            <span>🔑</span>
+            <div class="play-btn">▶</div>
+          </div>
+          <div class="video-duration">⏱ 5:15</div>
+          <div class="video-grade grade5">الصف الخامس</div>
+        </div>
+        <div class="video-info">
+          <div class="video-title">أسرار كلمات المرور القوية</div>
+          <div class="video-meta"><span>🔑 الحماية</span><span>•</span><span>⭐⭐ سهل</span></div>
+          <div class="video-progress"><div class="video-progress-bar" style="width:0%"></div></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo('التصيد الاحتيالي','🎣','تعرّف على أساليب الاحتيال الإلكتروني وكيف تتجنبها','https://www.youtube.com/watch?v=TtcV4jpNG8M')">
+        <div class="video-thumb">
+          <div class="video-thumb-inner">
+            <span>🎣</span>
+            <div class="play-btn">▶</div>
+          </div>
+          <div class="video-duration">⏱ 6:00</div>
+          <div class="video-grade grade7">الصف السابع</div>
+        </div>
+        <div class="video-info">
+          <div class="video-title">خطر التصيد الاحتيالي (Phishing)</div>
+          <div class="video-meta"><span>⚠️ التهديدات</span><span>•</span><span>⭐⭐⭐ متوسط</span></div>
+          <div class="video-progress"><div class="video-progress-bar" style="width:0%"></div></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo('الابتزاز الإلكتروني','🚨','كيف تحمي نفسك من الابتزاز وما الخطوات الصحيحة؟','https://www.youtube.com/watch?v=YYvUwMXmFkQ')">
+        <div class="video-thumb">
+          <div class="video-thumb-inner">
+            <span>🚨</span>
+            <div class="play-btn">▶</div>
+          </div>
+          <div class="video-duration">⏱ 7:20</div>
+          <div class="video-grade grade7">الصف السابع</div>
+        </div>
+        <div class="video-info">
+          <div class="video-title">الابتزاز الإلكتروني — كيف تتصرف؟</div>
+          <div class="video-meta"><span>🚨 الحماية</span><span>•</span><span>⭐⭐⭐ مهم</span></div>
+          <div class="video-progress"><div class="video-progress-bar" style="width:0%"></div></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo('أمان الشبكات','🌐','مفهوم جدار الحماية والـ VPN وأمان الشبكات اللاسلكية','https://www.youtube.com/watch?v=cA4k0uNjxzo')">
+        <div class="video-thumb">
+          <div class="video-thumb-inner">
+            <span>🌐</span>
+            <div class="play-btn">▶</div>
+          </div>
+          <div class="video-duration">⏱ 8:45</div>
+          <div class="video-grade grade9">الصف التاسع</div>
+        </div>
+        <div class="video-info">
+          <div class="video-title">أمان الشبكات — Firewall & VPN</div>
+          <div class="video-meta"><span>🌐 الشبكات</span><span>•</span><span>⭐⭐⭐⭐ متقدم</span></div>
+          <div class="video-progress"><div class="video-progress-bar" style="width:0%"></div></div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideo('التشفير وحماية البيانات','🔒','مبادئ التشفير وكيف تحمي بياناتك الشخصية','https://www.youtube.com/watch?v=xHaxAYDt75Q')">
+        <div class="video-thumb">
+          <div class="video-thumb-inner">
+            <span>🔒</span>
+            <div class="play-btn">▶</div>
+          </div>
+          <div class="video-duration">⏱ 9:10</div>
+          <div class="video-grade grade9">الصف التاسع</div>
+        </div>
+        <div class="video-info">
+          <div class="video-title">التشفير وحماية البيانات</div>
+          <div class="video-meta"><span>🔒 التشفير</span><span>•</span><span>⭐⭐⭐⭐ متقدم</span></div>
+          <div class="video-progress"><div class="video-progress-bar" style="width:0%"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ VIDEO MODAL — بعد التعديل -->
+<div class="modal-overlay" id="videoModal" onclick="handleModalClick(event)">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span class="modal-title" id="modalTitle">عنوان الفيديو</span>
+      <button class="modal-close" onclick="closeVideo()">✕</button>
+    </div>
+    <div class="modal-video">
+      <iframe
+        id="videoFrame"
+        src=""
+        frameborder="0"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="modal-body">
+      <p style="font-size:.85rem;color:var(--text2)">💡 انقر خارج الإطار أو اضغط ✕ لإغلاق الفيديو</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">🛡️ أسبوع <span>الأمن السيبراني</span></div>
+  <div class="footer-school">🏫 مدرسة جابر بن حيان (9-12) — سلطنة عُمان</div>
+  <div class="footer-teacher">الأستاذ فيصل العريبي | معلم تقنية المعلومات</div>
+  <div class="footer-copy">© 2026 — جميع الحقوق محفوظة | تم التصميم لطلابنا الأعزاء</div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

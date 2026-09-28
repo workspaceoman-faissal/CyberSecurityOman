@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شهادتي | أسبوع الأمن السيبراني</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- MATRIX BACKGROUND -->
+<div id="matrix-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-icon">🛡️</div>
+    أسبوع <span style="color:var(--green);margin-right:4px"> الأمن السيبراني</span>
+  </div>
+  <button class="nav-hamburger" id="navToggle">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="../index.html">🏠 الرئيسية</a>
+    <a href="videos.html">🎬 الفيديوهات</a>
+    <a href="awareness.html">🖼️ التوعية</a>
+    <a href="quiz.html">🧠 الاختبار</a>
+    <a href="games.html">🎮 الألعاب</a>
+    <a href="exercises.html">📝 التمارين</a>
+    <a href="certificate.html">🏆 شهادتي</a>
+  </div>
+  <div class="nav-school">🏫 مدرسة جابر بن حيان (9-12)</div>
+</nav>
+
+<!-- CERTIFICATE SECTION -->
+<section id="certificate" class="cert-section" style="min-height:100vh;padding:120px 20px 80px">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-tag tag-yellow">🏆 شهادة الإتمام</div>
+      <h2 class="section-title">احصل على شهادتك</h2>
+      <p class="section-sub">أدخل بياناتك وانطبع شهادتك الآن مجاناً</p>
+      <div style="margin-top:30px">
+        <a href="../index.html" class="btn-secondary">🏠 العودة للرئيسية</a>
+      </div>
+    </div>
+    <div class="cert-form-wrapper fade-in">
+      <div class="cert-form">
+        <h3>🎓 بيانات الشهادة</h3>
+        <div class="form-group">
+          <label>الاسم الكامل بالعربية</label>
+          <input type="text" id="certName" placeholder="مثال: فيصل العريبي">
+        </div>
+        <div class="form-group">
+          <label>الصف الدراسي</label>
+          <select id="certGrade">
+            <option value="الصف التاسع">الصف التاسع</option>
+            <option value="الصف العاشر">الصف العاشر</option>
+            <option value="الصف الحادي عشر">الصف الحادي عشر</option>
+            <option value="الصف الثاني عشر">الصف الثاني عشر</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>الموضوع المُنجز</label>
+          <select id="certTopic">
+            <option value="أسبوع الأمن السيبراني">أسبوع الأمن السيبراني 🛡️</option>
+            <option value="حماية كلمات المرور">حماية كلمات المرور 🔑</option>
+            <option value="التعرف على التصيد الاحتيالي">التعرف على التصيد الاحتيالي 🎣</option>
+            <option value="مكافحة الابتزاز الإلكتروني">مكافحة الابتزاز الإلكتروني 🚨</option>
+          </select>
+        </div>
+        <button class="generate-btn" onclick="generateCert()">🏆 أنشئ شهادتي الآن</button>
+      </div>
+    </div>
+
+    <div class="certificate-preview" id="certPreview">
+      <div id="cert-canvas-wrap">
+        <div class="cert-corner tl"></div>
+        <div class="cert-corner tr"></div>
+        <div class="cert-corner bl"></div>
+        <div class="cert-corner br"></div>
+        <div class="cert-school-name">🏫مدرسة جابر بن حيان (9-12) — سلطنة عُمان</div>
+        <div class="cert-logo-big">🛡️</div>
+        <div class="cert-title-ar">تُقدّم هذه الشهادة إلى</div>
+        <div class="cert-main-title" id="certNameDisplay">اسم الطالب</div>
+        <div class="cert-student-grade" id="certGradeDisplay">الصف الدراسي</div>
+        <div class="cert-divider"></div>
+        <div class="cert-body-text">
+          تقديراً لإتمامه فعاليات وأنشطة
+        </div>
+        <div class="cert-topic" id="certTopicDisplay">أسبوع الأمن السيبراني</div>
+        <div class="cert-badge-row">
+          <div class="cert-badge" style="color:var(--green);border-color:rgba(0,255,136,0.2)">✅ إتمام الفيديوهات</div>
+          <div class="cert-badge" style="color:var(--cyan);border-color:rgba(0,212,255,0.2)">🧠 اجتياز الاختبار</div>
+          <div class="cert-badge" style="color:var(--orange);border-color:rgba(255,107,53,0.2)">🎮 الألعاب التعليمية</div>
+          <div class="cert-badge" style="color:var(--purple);border-color:rgba(168,85,247,0.2)">📝 التمارين التفاعلية</div>
+        </div>
+        <div class="cert-footer">
+          <div class="cert-seal">
+            🛡️<div style="font-size:.55rem;color:var(--yellow);margin-top:2px">موثّقة</div>
+          </div>
+          <div>
+            <div style="font-size:.75rem;color:var(--text2);margin-bottom:4px">بتوجيه ورعاية</div>
+            <div class="cert-teacher-name">الأستاذ فيصل العريبي</div>
+            <div class="cert-teacher-title">معلم تقنية المعلومات</div>
+            <div class="cert-teacher-title"> مدرسة جابر بن حيان (9-12)</div>
+          </div>
+          <div class="cert-date">
+            <div style="font-size:.75rem;color:var(--text2);margin-bottom:4px">تاريخ الإصدار</div>
+            <div id="certDate" style="font-size:.85rem;font-weight:600"></div>
+            <div style="font-size:.7rem;color:var(--text2);margin-top:2px">1447هـ</div>
+          </div>
+        </div>
+      </div>
+      <div class="cert-actions">
+        <button class="cert-download-btn" onclick="printCert()">🖨️ طباعة الشهادة</button>
+        <button class="cert-print-btn" onclick="window.scrollTo(0,0)">↑ العودة للأعلى</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">🛡️ أسبوع <span>الأمن السيبراني</span></div>
+  <div class="footer-school">🏫مدرسة جابر بن حيان (9-12) — سلطنة عُمان </div>
+  <div class="footer-teacher">الأستاذ فيصل العريبي | معلم تقنية المعلومات</div>
+  <div class="footer-copy">© 2026 — جميع الحقوق محفوظة | تم التصميم  لطلابنا الأعزاء</div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
+
