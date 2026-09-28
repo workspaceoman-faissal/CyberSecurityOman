@@ -55,32 +55,33 @@
           <div class="exercise-arrow">›</div>
         </div>
         <div class="exercise-body">
-          <p class="drag-instruction">اسحب كل خطوة وأفلتها في المكان الصحيح:</p>
+          <p class="drag-instruction">اسحب كل خطوة وأفلتها في المكان الصحيح (أو اضغط على الخطوة ثم اضغط على مكانها):</p>
           <div class="drag-items" id="dragItems1">
-            <div class="drag-item" draggable="true" data-id="a">أضف رموزاً خاصة (@#!)</div>
-            <div class="drag-item" draggable="true" data-id="b">استخدم 12 حرفاً على الأقل</div>
-            <div class="drag-item" draggable="true" data-id="c">امزج أحرف كبيرة وصغيرة</div>
-            <div class="drag-item" draggable="true" data-id="d">لا تستخدم اسمك أو تاريخ ميلادك</div>
+            <div class="drag-item" data-id="a">أضف رموزاً خاصة (@#!)</div>
+            <div class="drag-item" data-id="b">استخدم 12 حرفاً على الأقل</div>
+            <div class="drag-item" data-id="c">امزج أحرف كبيرة وصغيرة</div>
+            <div class="drag-item" data-id="d">لا تستخدم اسمك أو تاريخ ميلادك</div>
           </div>
           <div class="drop-zones">
-            <div class="drop-zone" data-correct="b" ondragover="ev.preventDefault()" ondrop="dropItem(ev,'zone1a')">
+            <div class="drop-zone" data-correct="b">
               <div class="drop-label">الخطوة الأولى:</div>
               <div class="drop-slot" id="zone1a"><span style="color:var(--text2)">أفلت هنا</span></div>
             </div>
-            <div class="drop-zone" data-correct="c" ondragover="ev.preventDefault()" ondrop="dropItem(ev,'zone1b')">
+            <div class="drop-zone" data-correct="c">
               <div class="drop-label">الخطوة الثانية:</div>
               <div class="drop-slot" id="zone1b"><span style="color:var(--text2)">أفلت هنا</span></div>
             </div>
-            <div class="drop-zone" data-correct="a" ondragover="ev.preventDefault()" ondrop="dropItem(ev,'zone1c')">
+            <div class="drop-zone" data-correct="a">
               <div class="drop-label">الخطوة الثالثة:</div>
               <div class="drop-slot" id="zone1c"><span style="color:var(--text2)">أفلت هنا</span></div>
             </div>
-            <div class="drop-zone" data-correct="d" ondragover="ev.preventDefault()" ondrop="dropItem(ev,'zone1d')">
+            <div class="drop-zone" data-correct="d">
               <div class="drop-label">الخطوة الرابعة:</div>
               <div class="drop-slot" id="zone1d"><span style="color:var(--text2)">أفلت هنا</span></div>
             </div>
           </div>
-          <button class="check-btn" onclick="checkDrag()">✔ تحقق من الإجابات</button>
+          <button class="check-btn" style="width:100%;justify-content:center" onclick="checkDrag()">✔ تحقق من الإجابات</button>
+          <button class="btn-secondary" style="width:100%;margin-top:10px;justify-content:center" onclick="resetDrag()">↺ إعادة الترتيب</button>
           <div class="exercise-result" id="exResult1"></div>
         </div>
       </div>
